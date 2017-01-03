@@ -10,12 +10,13 @@
   - We think that missing information will exist in the parsing process
 
 #### dataset_v1.csv (799 by 7)
-- Extract important bibliographic information
+- Extract important bibliographic information such as journal, authors, years
   - abstract / doc_info	/ keywords / *year / publication / authors / title*
   - partially extracted manually. 
 
 #### dataset_v2.csv (799 by 7)
 - Standardization of notation such as abbreviations
+  - abstract\* / doc_info	/ keywords / *year / publication / authors / title*
 
 #### dataset_v3.csv (799 by 8)
 - After the text preprocessing process, append lemmatization result
@@ -23,9 +24,12 @@
 
 #### dataset_v4.csv (799 by 8)
 - After lemmatization process, additional remove stopwords
+  - abstract / doc_info	/ keywords / *year / publication / authors / title* / **lemma\***
 
 
 
-The description of the other data file will be added if it is an opportunity.
+
+#### *The description of the other file will be added if it is an opportunity.*
+
 
 
