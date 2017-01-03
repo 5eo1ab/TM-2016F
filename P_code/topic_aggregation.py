@@ -37,11 +37,11 @@ pub_topic = doc_topic.groupby(['publication']).mean()
 del doc_topic['publication']
 pub_topic.to_csv(save_dir+"res_pub_topic.csv")
 
-
+"""
 import numpy as np
 from sklearn.metrics import pairwise_distances
 from scipy.spatial.distance import cosine
 dist_out = 1-pairwise_distances(pub_topic, metric="cosine")
 df(dist_out, columns=pub_topic.index).to_csv(save_dir+"pub_cosine_matrix.csv", index=False)
-
+"""
  

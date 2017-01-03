@@ -39,7 +39,7 @@ cw = csv.writer(f, delimiter=',', quotechar='\n')
 cw.writerow(countvector.get_feature_names())
 cw.writerows(tf.A)
 f.close()
-
+"""
 countvector=CountVectorizer(binary=True)
 tf_bin=countvector.fit_transform(data)
 f = open(save_dir+"doc-term_matrix_bin.csv", 'wb')
@@ -47,5 +47,5 @@ cw = csv.writer(f, delimiter=',', quotechar='\n')
 cw.writerow(countvector.get_feature_names())
 cw.writerows(tf_bin.A)
 f.close()
-
+"""
 

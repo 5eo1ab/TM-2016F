@@ -57,7 +57,7 @@ for doc_idx in range(0, len(data)) :
             abbr_dic[tmp_abbr].append(full_abbr)
     #doc_idx += 1
 
-save_dir = "D:/course_2016_fall/Unstructured_Data_Analysis/Project/data/"
+save_dir = "../P_data/"
 f = open(save_dir+"abbr_dic_v0.csv", "w")
 for key in abbr_dic.keys() :
     for val in abbr_dic[key] :

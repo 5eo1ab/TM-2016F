@@ -1,6 +1,6 @@
 ### Code Descriptions
 
-#### Data Preprocessing File List
+#### File List for Data Preprocessing
 - data_split_sciencedirect.py
 >- Input : science.txt ; publication_list.txt
 >- Output : dataset_v1.csv ; skip_doc_v1.txt
@@ -24,13 +24,31 @@
 
 - text_vectorization_tf.py
 >- Input : dataset_v4.csv 
->- Output : doc-term_matrix_freq.csv ; doc-term_matrix_bin.csv ; word_list_v1.txt ; publication_list.txt
+>- Output : doc-term_matrix_freq.csv ; word_list_v1.txt
 >- Build 'Term-Freqeuncy Matrix' using CountVectorizer of Sklearn.feature_extraction.text
 >  - At this time, the Term-Frequency Matrix is the LDA's input
 >  - The Term-Frequency Matrix, represented as a binary, is used as input to the Co-occurance matrix. And the co-occurrence matrix is used as the input of the keyword network.
 
 
-#### Other code file descriptions...
+#### Other File List
+- tf2node-edge_list.py
+>- Input : doc-term_matrix_freq.csv ; word_list_v1.txt
+>- Output : keyword_node.csv ; keyword_edge.csv
+>- Build 'Edge List' and 'Node List' from 'Term-Freqeuncy Matrix'
+>  - Purpose of network analysis
+>  - Unit is keyword
 
+- ~~topic_modeling.r~~
+>- Input : dataset_v4.csv ; doc-term_matrix_freq.csv
+>- Output(each # of topic and iterations)
+>  - probability_doc-topic
+>  - probability_topic-term
+>  - topic-term_list
+>  - topic-doc_list
+>- Topic Modeling using LDA algorithms
 
+- topic_aggregation.py
+>- Input : dataset_v4.csv ; lda_prob_doc-topic.csv ; lda_prob_topic-term.csv
+>- Output : res_year_topic.csv ; res_pub_topic.csv
+>- Topic probability distribution is aggregated.
 

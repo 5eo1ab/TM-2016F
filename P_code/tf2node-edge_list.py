@@ -15,8 +15,8 @@ f = open(save_dir+"word_list_v1.txt")
 word_list = f.read().split("\t")[:-1]
 f.close()
 
-df_mat = pd.read_csv(save_dir+"pub_cosine_matrix.csv")
-word_list = df_mat.columns
+#df_mat = pd.read_csv(save_dir+"pub_cosine_matrix.csv")
+#word_list = df_mat.columns
 
 ########################################
 # Co-occurrence matrix Process
@@ -72,6 +72,6 @@ node_df=pd.DataFrame({'id':id_,
 edge_df.to_csv(save_dir+'keyword_edge.csv',index=False)
 node_df.to_csv(save_dir+'keyword_node.csv',index=False)
 
-edge_df.to_csv(save_dir+'publication_edge.csv',index=False)
-node_df.to_csv(save_dir+'publication_node.csv',index=False)
+#edge_df.to_csv(save_dir+'publication_edge.csv',index=False)
+#node_df.to_csv(save_dir+'publication_node.csv',index=False)
 
