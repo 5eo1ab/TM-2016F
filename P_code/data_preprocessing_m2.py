@@ -8,7 +8,7 @@ Created on Sun Dec 11 20:10:01 2016
 import pandas as pd
 from pandas import DataFrame as df
 
-file_dir = "D:/course_2016_fall/Unstructured_Data_Analysis/Project/data/dataset_v1.csv"
+file_dir = "../P_data/dataset_v1.csv"
 dataset = pd.read_csv(file_dir)
 data = dataset['abstract']
 
@@ -21,7 +21,7 @@ data = dataset['abstract']
 ########################################
 
 import csv
-save_dir = "D:/course_2016_fall/Unstructured_Data_Analysis/Project/data/"
+save_dir = "../P_data/"
 f = open(save_dir+"abbr_dic_v1.csv", "rb")
 csvReader = csv.reader(f)
 abbr_dic = {}
