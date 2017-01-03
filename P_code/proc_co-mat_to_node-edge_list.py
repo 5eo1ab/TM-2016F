@@ -8,7 +8,7 @@ Created on Tue Dec 13 22:34:20 2016
 import pandas as pd
 from pandas import DataFrame as df
 
-save_dir = "D:/course_2016_fall/Unstructured_Data_Analysis/Project/data/"
+save_dir = "../P_data/"
 df_mat = pd.read_csv(save_dir+"doc-term_matrix_freq.csv")
 
 f = open(save_dir+"word_list_v1.txt")
@@ -72,10 +72,6 @@ node_df=pd.DataFrame({'id':id_,
 edge_df.to_csv(save_dir+'keyword_edge.csv',index=False)
 node_df.to_csv(save_dir+'keyword_node.csv',index=False)
 
-
 edge_df.to_csv(save_dir+'publication_edge.csv',index=False)
 node_df.to_csv(save_dir+'publication_node.csv',index=False)
-
-
-
 
