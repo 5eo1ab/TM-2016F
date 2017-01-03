@@ -24,7 +24,7 @@
 
 #### dataset_v4.csv (799 by 8)
 - After lemmatization process, additional remove stopwords
-  - abstract / doc_info	/ keywords / *year / publication / authors / title* / **lemma\***
+  - abstract / doc_info	/ keywords / *year / publication / authors / title* / **lemma\* **
 
 
 
