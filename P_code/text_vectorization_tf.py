@@ -8,7 +8,7 @@ Created on Tue Dec 13 11:50:44 2016
 import pandas as pd
 from pandas import DataFrame as df
 
-file_dir = "D:/course_2016_fall/Unstructured_Data_Analysis/Project/data/dataset_v4.csv"
+file_dir = "../P_data/dataset_v4.csv"
 dataset = pd.read_csv(file_dir)
 #data = [lemma.split(" ") for lemma in dataset["lemma"]]
 data = dataset["lemma"]
@@ -26,7 +26,7 @@ tf=countvector.fit_transform(data)
 print len(countvector.get_feature_names())
 print tf.A.shape
 
-save_dir = "D:/course_2016_fall/Unstructured_Data_Analysis/Project/data/"
+save_dir = "../P_data/"
 f = open(save_dir+"word_list_v1.txt", 'wb')
 for word in countvector.get_feature_names() :
     f.write(word)

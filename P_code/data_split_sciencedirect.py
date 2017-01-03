@@ -8,11 +8,10 @@ Created on Sat Dec 10 16:17:17 2016
 import pandas as pd
 from pandas import DataFrame as df
 
-file_dir = "D:/course_2016_fall/Unstructured_Data_Analysis/Project/data/science.txt"
+file_dir = "../P_data/science.txt"
 f = open(file_dir, 'rb')
 raw_data = f.read()
 f.close()
-
 
 """
 split_data = raw_data.split("Keywords:")
@@ -62,7 +61,7 @@ def get_year(tmp1) :
         if tmp2 is True :
             return year
 
-save_dir = "D:/course_2016_fall/Unstructured_Data_Analysis/Project/data/"
+save_dir = "../P_data/"
 f = open(save_dir+"publication_list.txt")
 pub_li = f.read().split("\n")[1:]
 f.close()
@@ -97,14 +96,11 @@ data_df['title'] = tmp_ttl
 t1 = time.time()-t0
 print t1    # 22.5339999199 @ Desktop
     
-save_dir = "D:/course_2016_fall/Unstructured_Data_Analysis/Project/data/"
+save_dir = "../P_data/"
 data_df.to_csv(save_dir+"dataset_v1.csv", index=False)
 f = open(save_dir+"skip_doc_v1.txt", "w")
 for row in skip_doc :
     f.write(row)
     f.write("\n\n")
 f.close()
-
-
-
 

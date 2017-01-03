@@ -8,7 +8,7 @@ Created on Sun Dec 11 02:47:05 2016
 import pandas as pd
 from pandas import DataFrame as df
 
-file_dir = "D:/course_2016_fall/Unstructured_Data_Analysis/Project/data/dataset_v1.csv"
+file_dir = "../P_data/dataset_v1.csv"
 dataset = pd.read_csv(file_dir)
 data = dataset['abstract']
 
