@@ -82,6 +82,10 @@ def get_format(tag) :
     tag_info = tagdict[tag][0]
     if 'noun' in tag_info :
         return "n"
+    elif 'verb' in tag_info :
+        return "v"
+    elif 'adjective' in tag_info or 'adverb' in tag_info :
+        return "a" 
     else:
         return None
 
