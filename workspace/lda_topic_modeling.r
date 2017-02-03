@@ -37,7 +37,7 @@ DF <- as.data.frame(dfMatrix, stringsAsFactors = FALSE)
 setwd("../topic_model")
 getwd()
 
-num_topic <- c(3,5,7,10) #토픽 수
+num_topic <- c(5,10) #토픽 수
 start.time <- Sys.time()
 for (t in 1:length(num_topic)){
   NTopic <- num_topic[[t]] # Topic Modeling: LDA의 토픽수 정의
