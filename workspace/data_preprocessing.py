@@ -40,7 +40,7 @@ for k, v in tmp_dic.items() :
 # Basic preprocessing: tokenization, removing stopwords, POS-tagging, lemmatization
 # 기본적인 전처리 과정
 """
-
+t0 = time.time()
 
 ### removing punctuation(v1)
 import string
@@ -90,7 +90,7 @@ def get_format(tag) :
         return None
 
 import re
-t0, data_v5, lemma = time.time(), [], ""
+data_v5, lemma = [], ""
 for token_tags in data_v4 :
     tmp_li = []
     for word, pos_tag in token_tags :
@@ -102,8 +102,7 @@ for token_tags in data_v4 :
             continue
         tmp_li.append(str(lemma))
     data_v5.append(tmp_li)
-t1 = time.time() - t0
-print("processing time(sec):\t", t1)
+
 
 
 ### 2회 미만 출현 단어 제거
@@ -111,10 +110,13 @@ import collections
 word_list = [word for doc in data_v5 for word in doc]    
 word_count=collections.Counter(word_list)
 word_set = [word for word in set(word_list) if word_count[word]>1]
-
 data_v6 = [[word for word in doc if word in word_set] for doc in data_v5]
+
 
 ### save and import for remove stopwords(final)
 data_final = [" ".join(li) for li in data_v6]
 dataset["lemma"] = data_final
 dataset.to_csv(f_dir+"dataset_lemma.csv", index=False)
+
+t1 = time.time() - t0
+print("processing time(sec):\t", t1)
