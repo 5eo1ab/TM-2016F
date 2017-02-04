@@ -44,7 +44,7 @@ for (t in 1:length(num_topic)){
   NTopic <- num_topic[[t]] # Topic Modeling: LDA의 토픽수 정의
   
   ptm <- proc.time()
-  for (l in c(5000,10000)){ #c(1000,5000,10000)
+  for (l in c(1000,5000,10000)){ #c(1000,5000,10000)
     Gibbs_LDA <-LDA(AbsDTM, NTopic, method = "Gibbs", control = list(iter = l))
     proc.time() - ptm
     
