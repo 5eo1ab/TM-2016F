@@ -36,7 +36,7 @@ res_abst = []
 for idx in tmp_data.index.tolist() :
     tmp_abst = tmp_data['Abstract'][idx]
     #print(idx, "\n", re.findall(pattern, tmp_data['Abstract'][idx]))
-    tmp_abst = re.sub(pre_patt, pattern, tmp_data['Abstract'][idx])
+    tmp_abst = re.sub(pre_patt, '┬⌐ ', tmp_data['Abstract'][idx])
     tmp_abst = re.split(pattern, tmp_abst)[0]
     res_abst.append(tmp_abst)
 tmp_data['Abstract'] = res_abst
