@@ -30,8 +30,8 @@ print("Count of [No abstract available] : {0}".format(len(data)-len(tmp_data)) )
 
 ### (3) 초록 불용패턴 제거
 import re
-pattern = '\┬\⌐\s'
-pre_patt = 'Copyright\s?\┬\⌐\s?'
+pattern = '┬⌐\s'
+pre_patt = 'Copyright\s?┬⌐\s?'
 res_abst = []
 for idx in tmp_data.index.tolist() :
     tmp_abst = tmp_data['Abstract'][idx]

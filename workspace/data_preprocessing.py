@@ -40,6 +40,7 @@ for k, v in tmp_dic.items() :
 # Basic preprocessing: tokenization, removing stopwords, POS-tagging, lemmatization
 # 기본적인 전처리 과정
 """
+import time
 t0 = time.time()
 
 ### removing punctuation(v1)
@@ -73,7 +74,6 @@ data_v4 = [pos_tag(txt) for txt in data_v3]
            
            
 ### lemmatization(v5)
-import time
 from nltk.stem import WordNetLemmatizer
 wn_lemma = WordNetLemmatizer()
 from nltk.data import load
