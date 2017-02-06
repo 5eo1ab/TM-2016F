@@ -34,6 +34,10 @@ for k, v in tmp_dic.items() :
         abbr_dic[k.lower()] = (k,v)
 #abbr_lower = [item.lower() for item in list(abbr_dic.keys())]
 
+f = open(f_dir+"stopwords_in_ABST.txt", 'rb')
+r_data = f.read().decode("utf-8")
+f.close()
+StopwordsAbst = r_data.split(",") 
 
 ########################################
 """
@@ -96,6 +100,8 @@ for token_tags in data_v4 :
     for word, pos_tag in token_tags :
         if word in abbr_dic.keys() :
             lemma = abbr_dic[word][0]
+        elif word in StopwordsAbst :
+            continue
         elif get_format(pos_tag) is not None :
             lemma = wn_lemma.lemmatize(re.sub(r'[^\x00-\x7F]','', word), get_format(pos_tag))
         else :
