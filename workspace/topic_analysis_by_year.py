@@ -25,7 +25,7 @@ year_topic = doc_topic.groupby(['year']).mean()
 year_topic.columns = ["T{0}".format(t) for t in list(year_topic.columns.values)]
 #del doc_topic['year']
 year_topic = year_topic.loc[year_topic.index<2017]
-year_topic.to_csv(f_dir+"TMP_year_topic.csv")
+year_topic.to_csv(f_dir+"topic_analysis_by_year.csv")
 
 
 # (3) 시각화
